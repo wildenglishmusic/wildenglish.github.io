@@ -14,7 +14,7 @@ angular.module('wildEnglish', ['ui.bootstrap','ui.utils','ui.router', 'ui.calend
         controllerAs: 'app',
       })
     /* Add New States Above */
-    $urlRouterProvider.otherwise('/main');
+    $urlRouterProvider.otherwise('/');
 
 })
 
