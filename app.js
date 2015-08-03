@@ -8,7 +8,7 @@ angular.module('wildEnglish', ['ui.bootstrap','ui.utils','ui.router', 'ui.calend
       
     $stateProvider
      .state('main', {
-        url: '/main',
+        url: '/',
         templateUrl: 'states/main.html',
         controller: 'MainCtrl',
         controllerAs: 'app',
