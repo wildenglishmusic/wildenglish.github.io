@@ -78,10 +78,10 @@
         title="Play {{track.title}}"
         ng-class="{'is-active': player.playing === track.src }"
         ng-click="playPause($index)">
-        <span class="flex-auto h4">
+        <span class="flex-auto h5">
           {{track.title}}
         </span>
-        <span class="h4">
+        <span class="h5">
           {{ track.duration / 1000 | hhmmss }}
         </span>
       </button>
