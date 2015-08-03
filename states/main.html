@@ -1,0 +1,134 @@
+<div class="container-fluid" id="main">
+
+ <nav class="navbar navbar-static-top navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#wildnav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="wildnav">
+      <ul class="nav navbar-nav">
+        <li><a ng-href="#music">Music</a></li>
+        <li><a ng-href="#shows">Shows</a></li>
+        <li><a ng-href="#meet-band">Meet The Band</a></li>
+        <li><a ng-href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<section id="main-body">
+
+  <div class="jumbotron text-center headline">
+    <h1>Wild English</h1>
+<!--    <img class="mountains" src="assets/images/wildmtns.png" alt="mountains">-->
+  </div>
+
+  <section id="upcoming-shows">
+          <button class="btn btn-wild" ng-click="app.open()">
+              Upcoming Shows
+          </button>&nbsp;&nbsp;
+          <a href="https://www.google.com/maps/place/{{item.location}}" ng-repeat="item in app.items | orderBy: 'start.dateTime'" ng-hide="app.oldDates(item.start.dateTime)" class="show-link">
+              <div class="upcoming">
+
+                      <p class="show-summary">
+                         <date class="show-date">
+                          {{item.start.dateTime | date:'EEE, M/d/yy @ h:mm'}}
+                         </date>
+                          {{item.summary}}&nbsp; - &nbsp;
+                      </p>
+              </div>
+          </a>
+  </section>
+  <section id="calendar"></section>
+  <section id="soundcloud-tracks" class="soundcloud">
+
+      <div plangular="https://soundcloud.com/wildenglish/sets/wildenglishset" class="plangular">
+        <div class="p2">
+    <div class="flex flex-center">
+      <h4 class="m0 flex-auto">{{playlist.user.username}}</h4>
+      <samp class="h6">{{ currentTime | hhmmss }} / {{ duration | hhmmss }}</samp>
+    </div>
+    <h3 class="h1 caps mt0">{{track.title}}</h3>
+    <div class="flex flex-center">
+      <button class=""
+        title="Play Previous Track"
+        ng-click="previous()">
+        <span class="glyphicon glyphicon-backward"></span>
+      </button>
+      <button class=""
+        title="Play/Pause"
+        ng-click="playPause(index)">
+        <svg ng-if="player.playing !== track.src" class="icon geomicon" data-icon="play" viewBox="0 0 32 32" width="32" height="32" style="fill:currentcolor"><path d="M4 4 L28 16 L4 28 z "></path></svg>
+        <svg ng-if="player.playing === track.src" class="icon geomicon" data-icon="pause" viewBox="0 0 32 32" width="32" height="32" style="fill:currentcolor"><path d="M4 4 H12 V28 H4 z M20 4 H28 V28 H20 z "></path></svg>
+      </button>
+      <button class=""
+        title="Play Next Track"
+        ng-click="next()">
+        <span class="glyphicon glyphicon-forward"></span>
+      </button>
+    </div>
+  </div>
+  <ul class="list-reset">
+    <li ng-repeat="track in tracks">
+      <button
+        class=""
+        title="Play {{track.title}}"
+        ng-class="{'is-active': player.playing === track.src }"
+        ng-click="playPause($index)">
+        <span class="flex-auto">
+          {{track.user.username}} - {{track.title}}
+        </span>
+        <span class="h6">
+          {{ track.duration / 1000 | hhmmss }}
+        </span>
+      </button>
+    </li>
+  </ul>
+           <!-- <section class="track-info row">
+               <section class="track-name band-name col-xs-12 col-md-6">
+                    <p>{{ user.username }}</p>
+                    <h1>
+                        {{ tracks[player.playlistIndex].title }}
+                        <small>{{ currentTime | prettyTime }} | {{ duration | prettyTime }}</small>
+                    </h1>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-wild" role="progressbar" aria-valuenow="{{ currentTime / duration }}" aria-valuemin="0" aria-valuemax="{{duration}}" style="width: {{ (currentTime / duration) * 100 }}%;">
+                    <span class="sr-only"></span>
+                      </div>
+                    </div>
+                </section>
+                <section class="track-art col-xs-12 col-md-6">
+                    <img ng-src="{{ tracks[player.playlistIndex].artwork_url }}" alt="{{ track.title }}" />
+                </section>
+            </section>
+            <section class="player-buttons row">
+            <button ng-click="play(player.playlistIndex)"><span class="glyphicon glyphicon-play"></span>Play</button>
+            <button ng-click="pause()" ><span class="glyphicon glyphicon-pause"></span>Pause</button>
+            <button ng-click="previous()"><span class="glyphicon glyphicon-fast-backward"></span>Prev</button>
+            <button ng-click="next()"></span>Next<span class="glyphicon glyphicon-fast-forward"></button>
+            </section> -->
+      </div>
+
+  </section>
+
+</section>
+</div>
+
+<section id="contact">
+    <div id="ferry-ride">
+    <video autoplay loop poster="../app/assets/images/birdsmountain.jpeg" id="bgVideo">
+        <source src="../app/assets/videos/seattleferryride.webm" type="video/webm">
+        <source src="../app/assets/videos/seattleferryride.mp4" type="video/mp4">
+    </video>
+</div>
+</section>
+<footer>
+    &copy; Wild English 2015
+</footer>

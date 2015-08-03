@@ -1,0 +1,243 @@
+/* Required for Angular UI Bootstrap */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+/* Component SCSS */
+/* Add Component SCSS Above */
+
+/* Personal preference for BS modal.  The SCSS below makes the backdrop white and
+   causes the modal to fade in rather than slide in. */
+//@modal-backdrop-bg: white;
+//.modal {
+//	&.fade {
+//		.transition(opacity .3s);
+//	}
+//	&.fade .modal-dialog {
+//		.translate(0,0);
+//	}
+//}
+
+// Colors
+$wildOrange:        #ff0D00;
+$white:             #fff;
+$black:             #000;
+$red:               #f52;
+$darken-2:          rgba(black, 1/8);
+
+
+// Tools
+$center:            0 auto;
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: url(/wildenglish/app/assets/images/birdsmountain.jpeg) no-repeat;
+    background-size: 100%;
+    font-family: 'DIN Condensed', sans-serif;
+ }
+
+.container-fluid {
+    width: 70%;
+    margin: $center;
+    padding-left: 0;
+}
+
+.navbar {
+  margin: $center;
+  width: 80%;
+  text-align: center;
+  font-size: 13pt;
+}
+
+.navbar-nav {
+    float: none;
+    width: 60%;
+    margin: $center;
+
+    li {
+        width: 25%;
+    }
+}
+
+.navbar-nav > li > a {
+  color: #000;
+}
+
+#wildnav li a:hover {
+  color: $wildOrange;
+}
+
+#main {
+  padding: 0;
+}
+
+.container-fluid .jumbotron {
+  border-radius: 0;
+}
+.jumbotron {
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  max-height: 220px;
+  margin-top: 6ex;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.headline h1 {
+  color: $wildOrange;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin: 0;
+  font-size: 40pt;
+  text-align: center;
+}
+
+.mountains {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 120%;
+  height: 320px;
+}
+
+#upcoming-shows {
+    width: 80%;
+    margin: $center;
+    background: $white;
+}
+
+a.show-link:hover {
+    text-decoration: none;
+}
+
+.upcoming {
+    display: inline;
+
+    .show-summary {
+        color: $wildOrange;
+        display: inline;
+        font-size: 12pt;
+    }
+    .show-summary:hover {
+        color: gray;
+        text-decoration: none;
+    }
+}
+
+.btn-wild {
+    color: white;
+    background: $wildOrange;
+    border-color: $wildOrange;
+}
+
+.btn-wild:hover {
+    color: $white;
+}
+
+.soundcloud {
+    width: 80%;
+    margin: $center;
+    margin-top: 15%;
+    background-color: rgba(255,255,255,0.3);
+
+    .plangular {
+
+        .track-info {
+        width: 90%;
+        margin: $center;
+        }
+
+        .track-name {
+            padding: 0;
+            color: $black;
+
+            small {
+                font-size: 80%;
+                color: darkslategray;
+            }
+        }
+        .track-art {
+            text-align: right;
+            padding: 0;
+        }
+        .player-buttons {
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 2%;
+            text-align: center;
+            button {
+                width: 18%;
+            }
+        }
+    }
+}
+
+.progress {
+    display: block;
+    width: 100%;
+    height: 0.5rem;
+    margin: 0.75rem 0;
+    background-color: rgba(0, 0, 0, 0.125);
+    border: 0;
+    -webkit-appearance: none;
+    cursor: pointer;
+
+    .progress-bar-wild {
+        background-color: $wildOrange;
+    }
+}
+
+.fc-event {
+    font-size: 1.1em;
+    line-height: 2.3;
+    border: 1px solid $wildOrange;
+    background-color: $wildOrange;
+}
+
+.list-reset {
+  list-style-type: none;
+  li {
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    button {
+      background: transparent;
+      border: 0;
+    }
+  }
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+.navbar-nav > li > a {
+  color: #000;
+}
+
+#wildnav li a:hover {
+  color: $wildOrange;
+  background-color: transparent;
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+  .mountains {
+    position: absolute;
+    top: -41%;
+    left: -0.3%;
+    z-index: -1;
+    width: 100.3%;
+    height: 500px;
+  }
+
+}}

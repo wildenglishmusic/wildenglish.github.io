@@ -1,0 +1,251 @@
+/* Required for Angular UI Bootstrap */
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer; }
+
+/* Component SCSS */
+/* Add Component SCSS Above */
+/* Personal preference for BS modal.  The SCSS below makes the backdrop white and
+   causes the modal to fade in rather than slide in. */
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+/*
+  background: url(assets/images/birdsmountain.jpeg) no-repeat;
+  background-size: 100%;
+*/
+  font-family: 'DIN Condensed', sans-serif; }
+
+.container-fluid {
+  width: 70%;
+  margin: 0 auto;
+  padding-left: 0; }
+
+.container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#main {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: url(assets/images/birdsmountain.jpeg) no-repeat;
+  background-size: 100%;
+  height: 100vh;
+  width: 100%;
+}
+
+#main-body {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  font-size: 13pt; }
+
+.navbar-nav {
+  float: none;
+  width: 60%;
+  margin: 0 auto; }
+  .navbar-nav li {
+    width: 25%; }
+
+.navbar-nav > li > a {
+  color: #000; }
+
+#wildnav li a:hover {
+  color: #ff0D00; }
+
+#main {
+  padding: 0; }
+
+.container-fluid .jumbotron {
+  border-radius: 0; }
+
+.jumbotron {
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  max-height: 220px;
+  margin-top: 6ex;
+  margin-bottom: 0;
+  text-align: center; }
+
+.headline h1 {
+  color: #ff0D00;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin: 0;
+  font-size: 40pt;
+  text-align: center; }
+
+.mountains {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 120%;
+  height: 320px; }
+
+#upcoming-shows {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff; }
+
+a.show-link:hover {
+  text-decoration: none; }
+
+.upcoming {
+  display: inline; }
+  .upcoming .show-summary {
+    color: #ff0D00;
+    display: inline;
+    font-size: 12pt; }
+  .upcoming .show-summary:hover {
+    color: gray;
+    text-decoration: none; }
+
+.btn-wild {
+  color: white;
+  background: #ff0D00;
+  border-color: #ff0D00; }
+
+.btn-wild:hover {
+  color: #fff; }
+
+.soundcloud {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 15%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;}
+  .soundcloud .plangular .track-info {
+    width: 90%;
+    margin: 0 auto; }
+  .soundcloud .plangular .track-name {
+    padding: 0;
+    color: #000; }
+    .soundcloud .plangular .track-name small {
+      font-size: 80%;
+      color: darkslategray; }
+  .soundcloud .plangular .track-art {
+    text-align: right;
+    padding: 0; }
+  .soundcloud .plangular .player-buttons {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 2%;
+    text-align: center; }
+    .soundcloud .plangular .player-buttons button {
+      width: 18%; }
+.plangular {
+  position: relative;
+  padding: 2%;
+}
+
+.plangular img {
+  position: absolute;
+  top: 8%;
+  right: 10%;
+  height: 120px;
+}
+.progress {
+  display: block;
+  width: 100%;
+  height: 0.5rem;
+  margin: 0.75rem 0;
+  background-color: rgba(0, 0, 0, 0.125);
+  border: 0;
+  -webkit-appearance: none;
+  cursor: pointer; }
+  .progress .progress-bar-wild {
+    background-color: #ff0D00; }
+
+.list-reset {
+  list-style-type: none;
+}
+.list-reset li {
+  border-bottom: 1px solid rgba(0,0,0,0.6);
+}
+
+.list-reset li button {
+  background: transparent;
+  border: 0;
+}
+
+section#calendar {
+    display: block;
+}
+
+section#contact {
+    height: 100vh;
+}
+
+#ferry-ride {
+    height: 100vh;
+}
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+.event-cal {
+    width: 100%;
+    min-height: 500px;
+}
+
+footer {
+    background-color: rgba(255,255,255,0.5);
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.fc-event {
+  font-size: 1.1em;
+  line-height: 2.3;
+  border: 1px solid #ff0D00;
+  background-color: #ff0D00; }
+
+.modal-dialog {
+    width: 55%;
+}
+
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .navbar-nav > li > a {
+    color: #000; }
+
+  #wildnav li a:hover {
+    color: #ff0D00;
+    background-color: transparent; }
+
+  /* Large devices (large desktops, 1200px and up) */ }
+@media (min-width: 992px) and (min-width: 1200px) {
+  .mountains {
+    position: absolute;
+    top: -41%;
+    left: -0.3%;
+    z-index: -1;
+    width: 100.3%;
+    height: 500px; } }
+
+/*# sourceMappingURL=app.css.map */
