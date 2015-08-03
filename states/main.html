@@ -51,11 +51,7 @@
 
       <div plangular="https://soundcloud.com/wildenglish/sets/wildenglishset" class="plangular">
         <div class="p2">
-    <div class="flex flex-center">
-      <h4 class="m0 flex-auto">{{playlist.user.username}}</h4>
-      <samp class="h6">{{ currentTime | hhmmss }} / {{ duration | hhmmss }}</samp>
-    </div>
-    <h3 class="h1 caps mt0">{{track.title}}</h3>
+    <h3 class="h1 caps mt0">{{track.title}} <samp class="h4">{{ currentTime | hhmmss }} / {{ duration | hhmmss }}</samp></h3>
     <div class="flex flex-center">
       <button class=""
         title="Play Previous Track"
@@ -82,10 +78,10 @@
         title="Play {{track.title}}"
         ng-class="{'is-active': player.playing === track.src }"
         ng-click="playPause($index)">
-        <span class="flex-auto">
-          {{track.user.username}} - {{track.title}}
+        <span class="flex-auto h4">
+          {{track.title}}
         </span>
-        <span class="h6">
+        <span class="h4">
           {{ track.duration / 1000 | hhmmss }}
         </span>
       </button>
