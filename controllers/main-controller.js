@@ -135,7 +135,7 @@ angular.module('wildEnglish')
   console.log(this.trackNumber)
   console.log(this.trackList[this.indexTrack].trackNum)
   
-  $('#soundcloud-tracks').waypoint(function(direction) {
+  $('#contact').waypoint(function(direction) {
      if(direction == "down"){
       $('.navbar-nav > li > a').animate({
          opacity: 0
@@ -150,8 +150,6 @@ angular.module('wildEnglish')
          opacity: 1
       }, 200)  
      }
-   }, {
-     offset: '-25%'
    })
 
   });
